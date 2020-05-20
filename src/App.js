@@ -176,26 +176,28 @@ function App() {
 
   return (
     <div className="App">
-      <Header
-        title={"Star Wars Known Relationships"}
-        description={"check if any 2 Star Wars characters have lived or been seen together"}
+      <div className={"prompt-box"}>
+        <Header
+          title={"Star Wars Known Relationships"}
+          description={"check if any 2 Star Wars characters have lived or been seen together"}
+          />
+        <PickCharacters
+          charA={charA}
+          charB={charB}
+          charList={charList}
+          formError={formError}
+          handleCharacterCompare={handleCharacterCompare}
+          handleCharacterSelection={handleCharacterSelection}
         />
-      <PickCharacters
-        charA={charA}
-        charB={charB}
-        charList={charList}
-        formError={formError}
-        handleCharacterCompare={handleCharacterCompare}
-        handleCharacterSelection={handleCharacterSelection}
-      />
+      </div>
       {sameFilm.length > 0 &&
         <Crawl
           title={sameFilm}
           planet={samePlanet}
           ship={sameShip}
           vehicle={sameVehicle}
-        charA={charA}
-        charB={charB}/> }
+          charA={charA}
+          charB={charB}/> }
     </div>
   );
 }

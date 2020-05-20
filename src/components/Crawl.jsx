@@ -22,7 +22,7 @@ Crawl.propTypes = {
   charA: PropTypes.string.isRequired,
   charB: PropTypes.string.isRequired,
   planet: PropTypes.string.isRequired,
-  ship: PropTypes.string,
-  title: PropTypes.string,
-  vehicle: PropTypes.string
+  ship: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+  title: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
+  vehicle: PropTypes.oneOfType([PropTypes.array, PropTypes.string])
 }
