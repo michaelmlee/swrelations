@@ -35,7 +35,7 @@ export default function PickCharacters({charA, charB, charList, formError, handl
         <Button className={classes.button} onClick={() => handleCharacterCompare()} size="large" variant="outlined" color="primary">
           Find Relationships
         </Button>
-        <p>{formError}</p>
+        <p className={classes.error}>{formError}</p>
       </>
   );
 };
@@ -59,5 +59,8 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     margin: theme.spacing(2)
+  },
+  error: {
+    color: "red"
   }
 }));

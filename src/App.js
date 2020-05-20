@@ -60,6 +60,9 @@ function App() {
     if(charA === "" || charB === ""){
       setFormError("Please pick a character from both dropdowns");
       return;
+    } else if(charA === charB){
+      setFormError("Please pick 2 different characters");
+      return;
     } else
       setFormError("");
 
