@@ -23,7 +23,6 @@ body {
   position: relative;
   width: 100%;
   min-height: 60vh;
-  top: -25px;
   background-image: linear-gradient(0deg, transparent, black 75%);
   z-index: 1;
 }
@@ -47,7 +46,7 @@ body {
   position: relative;
   top: 99999px;
   transform-origin: 50% 100%;
-  animation: crawl 45s linear;
+  animation: crawl 30s linear;
 }
 
 .crawl > .title {
@@ -62,7 +61,7 @@ body {
 
 @keyframes crawl {
   0% {
-    top: -100px;
+    top: -500px;
     transform: rotateX(20deg)  translateZ(0);
   }
   100% {
